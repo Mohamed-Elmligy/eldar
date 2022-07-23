@@ -1,0 +1,21 @@
+<div class="w-50 login_form">
+    <mat-form-field appearance="outline" class="col-12 my-3">
+        <mat-label>Org Name </mat-label>
+        <input matInput placeholder="Enter Your email" maxlength="30" required type="text">
+        <mat-icon matSuffix >local_hospital</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="col-12 my-3 ">
+        <mat-label>Registration Number </mat-label>
+        <input matInput placeholder="Registration Number" maxlength="30" required type="text">
+        <mat-icon matSuffix >confirmation_number</mat-icon>
+    </mat-form-field>
+    <div class="col-12 my-3">
+        <label for="formFileMultiple" class="form-label w-50 fs-5">Logo</label>
+        <mat-icon class="w-50 upload" (click)="input.click()" >cloud_upload</mat-icon>
+        <input class="form-control" type="file" id="formFileMultiple" #input multiple hidden>
+      </div>
+    <div class="row">
+        <button mat-raised-button color="primary" class="col m-1">Register</button>
+        <button mat-raised-button color="primary" class="col m-1">Cancel</button>
+    </div>
+</div>

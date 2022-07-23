@@ -1,0 +1,48 @@
+<app-header></app-header>
+<div class="d-flex flex-row align-content-between justify-content-around m-4">
+    <div class="">
+        <div class="w-25 login_form d-flex flex-row align-content-center justify-content-center">
+            <form class="example-form">
+                <input type="text" placeholder="Search for a Case" [formControl]="control" [matAutocomplete]="auto"  [(ngModel)]="orgSelected">
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+                        {{street}}
+                    </mat-option>
+                </mat-autocomplete>
+            </form>
+        </div>
+    </div>
+    <div class="">
+        <a routerLink="/new/donor" class="btn btn-primary"> Add New Donor</a>
+    </div>
+</div>
+<table class="table table-info w-75 m-auto">
+    <thead class="text-center">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <tr>
+        <th scope="row">1</th>
+        <td>عهد محمد </td>
+        <td>01156698475</td>
+        <td> <button mat-raised-button color="primary" class="m-1">View</button> <button mat-raised-button color="accent" class="m-1">Edit</button> <button mat-raised-button color="warn" class="m-1">Delete</button> </td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>نسرين هاشم</td>
+        <td>01201299778</td>
+        <td> <button mat-raised-button color="primary" class="m-1">View</button> <button mat-raised-button color="accent" class="m-1">Edit</button> <button mat-raised-button color="warn" class="m-1">Delete</button></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>محمد عادل</td>
+        <td>01207584796</td>
+        <td> <button mat-raised-button color="primary" class="m-1">View</button> <button mat-raised-button color="accent" class="m-1">Edit</button> <button mat-raised-button color="warn" class="m-1">Delete</button> </td>
+      </tr>
+    </tbody>
+  </table>

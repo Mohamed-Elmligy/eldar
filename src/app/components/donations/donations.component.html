@@ -1,0 +1,55 @@
+<app-header></app-header>
+<div class="container">
+    <div class="d-flex flex-row align-content-between justify-content-around m-4">
+        <div class="">
+            <h1>بيانات حالة القلب المفتوح</h1>
+        </div>
+    </div>
+    <table class="table table-info w-75 m-auto">
+        <thead class="text-center">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Is Paid</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody class="text-center" *ngFor="let donations of listOfDonations; let i = index">
+            <tr>
+                <th scope="row">{{i+1}}</th>
+                <td>{{donations.name}}</td>
+                <td>{{donations.amountReceived}}</td>
+                <td>
+                    <mat-checkbox (change)="addToCollected(donations.id)">
+                    </mat-checkbox>
+                </td>
+                <td> <button mat-fab color="accent" class="m-1">
+                        <mat-icon (click)="openDialog(donations.id)" >delete</mat-icon>
+                    </button> </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <div class="row">
+            <div class="col">
+                <h2>المطلوب</h2>
+            </div>
+            <div class="col">
+                <h2>الحالى</h2>
+            </div>
+            <div class="col">
+                <h2>المستلم</h2>
+            </div>
+            <div class="col">
+                <h2>المتبقى</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">{{amountNeeded}}</div>
+            <div class="col">{{amountNow}}</div>
+            <div class="col">{{amountCollected}}</div>
+            <div class="col">{{amountRemaining}}</div>
+        </div>
+    </div>
+</div>
