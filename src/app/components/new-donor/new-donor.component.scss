@@ -1,5 +1,9 @@
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 25vw;
+  @media (max-width: 992px) {
+    width: 80%
   }
+}

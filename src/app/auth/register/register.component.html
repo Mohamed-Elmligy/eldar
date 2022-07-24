@@ -1,0 +1,34 @@
+<div class="w-25 login_form">
+    <mat-form-field appearance="outline" class="col d-block my-3">
+        <mat-label>User Name </mat-label>
+        <input matInput placeholder="Enter Your username" maxlength="30" required type="text"
+             class="text-white">
+        <mat-icon matSuffix class="text-white">account_circle</mat-icon>
+        <mat-hint>Example: eldar485</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="col d-block my-3 ">
+        <mat-label>Password </mat-label>
+        <input matInput placeholder="Enter Your password" maxlength="30" required type="password"
+             class="text-white">
+        <mat-icon matSuffix class="text-white">lock</mat-icon>
+        <mat-hint>min 8 characters</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="col d-block my-3 ">
+        <mat-label>Retype Password </mat-label>
+        <input matInput placeholder="Retype Your password" maxlength="30" required type="password"
+             class="text-white">
+        <mat-icon matSuffix class="text-white">lock</mat-icon>
+        <mat-hint>min 8 characters</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="col d-block my-3">
+        <mat-label>User Name </mat-label>
+        <input matInput placeholder="Enter Your email" maxlength="30" required type="email"
+             class="text-white">
+        <mat-icon matSuffix class="text-white">account_circle</mat-icon>
+        <mat-hint>eldar@gmail.com</mat-hint>
+    </mat-form-field>
+    <div class="row">
+        <a mat-raised-button color="primary" class="col m-1" routerLink="/organization">Register</a>
+        <button mat-raised-button color="primary" class="col m-1">Cancel</button>
+    </div>
+</div>

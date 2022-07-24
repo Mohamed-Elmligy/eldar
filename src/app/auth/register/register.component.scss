@@ -1,0 +1,8 @@
+.login_form {
+    height: 50vh;
+    margin: 5% auto;
+
+    @media (max-width: 768px) {
+        width: 75% !important;
+    }
+}
